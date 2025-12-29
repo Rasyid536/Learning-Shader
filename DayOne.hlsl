@@ -5,8 +5,7 @@ Shader "Custom/UrpUnlit" {
     }
     SubShader {
         Tags { "RenderPipeline" = "UniversalPipeline" 
-
-            }
+        }
         Pass {
             Name "UnlitPass" 
             
@@ -56,3 +55,10 @@ Shader "Custom/UrpUnlit" {
     }
  
 }
+
+
+
+
+/*What i learn today
+1. Basic Shader structure
+2. How to apply uv, normal, and texture */
