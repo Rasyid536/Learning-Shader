@@ -42,7 +42,7 @@ Shader "BasicLearn/First" // First part of ShaderLab that define shader name
                 return o;
             }
 
-            float frag(v2f i) : SV_TARGET // Fragment Shader here
+            float4 frag(v2f i) : SV_TARGET // Fragment Shader here
             {
                 return _BaseColor;
             }
