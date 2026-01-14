@@ -53,7 +53,7 @@ Shader "BasicLearn/BasicTexturing"
                 return o;
             }
 
-            float frag(v2f i) : SV_TARGET
+            float4 frag(v2f i) : SV_TARGET
             {
                 float4 textureColor = SAMPLE_TEXTURE2D(_BaseTexture, sampler_BaseTexture, i.uv);
                 return textureColor * _BaseColor;
