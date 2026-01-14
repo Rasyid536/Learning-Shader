@@ -23,13 +23,13 @@ Shader "BasicLearn/BasicTexturing"
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
-            CBUFFER_START(UnityPerMaterial)
+            CBUFFER_START(UnityPerMaterial) // Kompatibilitas SRP Batcher untuk meminimalisir draw call
             float4 _BaseColor;
             float4 _BaseTexture_ST;
-            CBUFFER_END
+            CBUFFER_END // Didalam Cbuffer Start dan End menerapkan SRP Batcher
 
-            TEXTURE2D(_BaseTexture);
-            SAMPLER(sampler_BaseTexture);
+            TEXTURE2D(_BaseTexture); // Ini texturenya
+            SAMPLER(sampler_BaseTexture); // Sampler texture untuk membaca texture ke Objek
 
             struct Attributes
             {
